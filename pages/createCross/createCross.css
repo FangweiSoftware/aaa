@@ -1,0 +1,15 @@
+#createCross #createCrossForm > li {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  line-height: 30px;
+  margin: 10px;
+}
+#createCross .footer-buttons {
+  width: 100%;
+  padding: 20px 0 0;
+  border-top: 1px solid #04436a;
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,0 +1,134 @@
+easyui-layout {
+  height: 900px;
+}
+@media screen and (max-width: 300px) {
+  body {
+    background-color: lightblue;
+  }
+}
+nav {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background: #0a5380;
+  position: relative;
+  z-index: 999;
+  overflow: hidden;
+  padding-left: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+nav .logo {
+  display: block;
+  float: left;
+  height: 60px;
+  width: 60px;
+  background: url("../images/logo.png") no-repeat;
+  background-size: contain;
+}
+nav h1 {
+  font-size: 24px;
+  float: left;
+  color: #fff;
+}
+nav .nav {
+  float: left;
+  margin-left: 50px;
+}
+nav .nav li {
+  cursor: pointer;
+}
+nav .nav > li {
+  box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.2);
+  float: left;
+  margin-top: 30px;
+  margin-left: 10px;
+  height: 30px;
+  width: 100px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  background: #1b7ac4;
+  position: relative;
+}
+nav .nav > li:nth-of-type(1) {
+  border-radius: 5px 0 0 0 ;
+}
+nav .nav > li:last-of-type {
+  border-radius: 0 5px 0 0 ;
+}
+nav .nav > li:hover > ul > li {
+  height: 30px;
+  margin: 3px 0;
+  transition-duration: .5s;
+}
+nav .nav > li > ul {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 100px;
+  transition-duration: .7s;
+  overflow: hidden;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.6);
+}
+nav .nav > li > ul > li {
+  height: 0px;
+  line-height: 30px;
+  background: #1b7ac4;
+  transition-duration: .7s;
+}
+nav .nav > li > ul > li:hover {
+  color: #000;
+}
+nav .user-center {
+  margin-right: 60px;
+}
+nav .user-center a {
+  color: #fff;
+}
+nav .user-center:hover #optionsList {
+  height: 90px;
+  transition: .4s 0s;
+}
+nav .user-center #optionsList {
+  position: fixed;
+  right: 45px;
+  top: 60px;
+  width: 90px;
+  background: #0a5380;
+  height: 0;
+  overflow: hidden;
+  transition: .8s .8s;
+}
+nav .user-center #optionsList li {
+  height: 30px;
+  overflow: hidden;
+  line-height: 30px;
+  padding-left: 10px;
+}
+a.skiplink {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+a.skiplink:focus {
+  clip: auto;
+  height: auto;
+  width: auto;
+  background-color: #fff;
+  padding: 0.3em;
+}
+#map:focus {
+  outline: #4A74A8 solid 0.15em;
+}
+#mini_window {
+  width: 30px;
+  background: #f00;
+}
