@@ -1,29 +1,28 @@
-@baseColor: rgb(10, 83, 128);
-@panelTitleColor: #064E7B;
-@baseLightColor: rgb(27, 122, 196);
-@baseBgColor: #387195;
+@baseColor: rgba(0, 0, 0, 0.72);
+@panelTitleColor: rgb(39, 39, 39);
+@baseLightColor: rgb(78, 78, 77);
+@baseBgColor: rgba(122, 122, 122, 0.31);
+@tableBgColor: rgba(80, 80, 80, 0.86);
+@tableBorderColor: #000000;
+@deepBgColor: #5d5d5d;
+@panelBorderColor: #000000;
+@buttonSMColor: #000000;
+@buttonSMhover: #919191;
+@buttonLGColor: #000000;
+@buttonLGHover: #626262;
+@navBg: rgba(0, 0, 0, 0.62);
+@navbarColor: rgb(125, 131, 133);
+@tabPanelColor: #696969;
+@inputColor:#000;
 
-
-@tableBgColor:#6590ab;
 @tableSelectedColor: #487fa4;
-@tableBorderColor:#789cb3;
-@tableHoverColor: #508db6;
+@tableHoverColor: #96989d;
 
 
-@deepBgColor:#04436a;
-@panelBorderColor:#053e61;
-@buttonSMColor:#064E7B;
-@buttonSMhover:#0B8FE1;
-@buttonLGColor:#1b7ac4;
-@buttonLGHover: #1665a2;
-@navBg:rgb(10, 83, 128);
-@navbarColor:rgb(27, 122, 196);
-
-
-@panel_header_color:rgb(10, 83, 128);
+@panel_header_color: rgb(117, 117, 117);
 @panel_spilt_color: #074669;
-@accordion_selected: rgb(30, 139, 222);
-@panel_body_color:#387195;
+@accordion_selected: rgb(0, 0, 0);
+@panel_body_color: rgba(94, 94, 94, 0.66);
 
 .panel-header{
   background: @panel_header_color;
@@ -67,7 +66,9 @@
   }
 }
 
-
+.datagrid-row-over{
+  background: @tableHoverColor;
+}
 
 .accordion{
   background: @deepBgColor url("../images/earth-big.png") no-repeat 70px 150px;
@@ -147,13 +148,6 @@
 }
 
 
-.layout-panel-east{
-  .panel-body{
-    background: @panel_body_color url("../images/tools.png") no-repeat 13px 0;
-  }
-}
-
-
 
 
 table{
@@ -183,11 +177,6 @@ th,td{
   background: @tableHoverColor;
 }
 
-.datagrid-row-over{
-  background: @tableHoverColor;
-}
-
-
 .datagrid-toolbar{
   background: @deepBgColor;
   border:0 none;
@@ -195,10 +184,8 @@ th,td{
 
 .datagrid-htable, .datagrid-btable,
 .datagrid-ftable{
-  border-collapse: separate;
+  border-collapse: collapse;
 }
-
-
 
 .datagrid-header{
   border:0 none;
@@ -487,7 +474,7 @@ input[type='text'],input[type='password']{
   padding-right: 10px;
   border: none;
   border-radius: 3px;
-  background-color: #04436a;
+  background-color: @inputColor;
   color: #fff;
   text-decoration: none;
   font-family:'Microsoft Yahei';

@@ -1,5 +1,5 @@
 .panel-header {
-  background: #0a5380;
+  background: #e37316;
   border: 0 none;
 }
 .panel-title {
@@ -8,25 +8,25 @@
 }
 .panel-body {
   border: 0 none;
-  background: #387195;
+  background: #e1a767;
 }
 .window {
-  background: #0a5380;
+  background: #e99322;
   border: 0 none;
 }
 .window .window-body {
-  border-color: #04436a;
+  border-color: #c40001;
 }
 .window .panel-header {
-  border-bottom: 1px solid #04436a;
+  border-bottom: 1px solid #c40001;
 }
 #south_layout_window .tabs-container {
-  border-top: 1px solid #04436a;
+  border-top: 1px solid #c40001;
 }
 .layout-expand-west,
 .layout-expand-east {
   opacity: 0;
-  background: #0a5380;
+  background: #e99322;
 }
 .layout-expand-west:hover,
 .layout-expand-east:hover {
@@ -34,7 +34,7 @@
   transition: .3s;
 }
 .accordion {
-  background: #04436a url("../images/earth-big.png") no-repeat 70px 150px;
+  background: #c40001 url("../images/earth-big.png") no-repeat 70px 150px;
   border: 0 none;
 }
 .accordion .accordion-header {
@@ -43,29 +43,29 @@
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 .accordion .accordion-header-selected {
-  background: #1e8bde;
-  border-top: 1px solid #1e538f;
+  background: #e37316;
+  border-top: 1px solid #ff001e;
 }
 .accordion .accordion-header-selected .panel-title {
   color: #fff;
 }
 .layout-panel-east {
-  border-left: 5px solid #0a5380;
+  border-left: 5px solid #e37316;
 }
 .layout-split-west,
 .layout-panel-east,
 .layout-split-south {
-  border-top: 1px solid #074669;
+  border-top: 1px solid #c7b16a;
   position: fixed;
 }
 .layout-split-west {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border-right: 5px solid #0a5380;
+  border-right: 5px solid #e37316;
 }
 .layout-expand {
-  background: #0a5380;
+  background: #e99322;
 }
 .tabs {
   border: 0 none;
@@ -75,11 +75,11 @@
   margin: 0;
 }
 .tabs-header {
-  background: #0a5380;
+  background: #e99322;
   border: 0 none;
 }
 .tabs li a.tabs-inner {
-  background: #04436a;
+  background: #c40001;
   color: #fff;
   border-radius: 0;
 }
@@ -88,13 +88,13 @@
   border: 0 none;
 }
 .tabs li.tabs-selected a.tabs-inner {
-  background: #387195;
+  background: #e1a767;
   color: #fff;
 }
 .tabs-panels {
   padding: 4px;
   border: 0 none;
-  border-color: #04436a;
+  border-color: #c40001;
 }
 .tabs-scroller-left,
 .tabs-scroller-right {
@@ -104,8 +104,8 @@
   width: 0;
   height: 0;
 }
-.layout-panel-east .panel-body {
-  background: #387195 url("../images/tools.png") no-repeat 13px 0;
+.datagrid-row-over {
+  background: #508db6;
 }
 table {
   background: #6590ab;
@@ -131,17 +131,14 @@ td {
 .datagrid-row:hover {
   background: #508db6;
 }
-.datagrid-row-over {
-  background: #508db6;
-}
 .datagrid-toolbar {
-  background: #04436a;
+  background: #c40001;
   border: 0 none;
 }
 .datagrid-htable,
 .datagrid-btable,
 .datagrid-ftable {
-  border-collapse: separate;
+  border-collapse: collapse;
 }
 .datagrid-header {
   border: 0 none;
@@ -151,7 +148,7 @@ td {
   background: transparent;
 }
 .datagrid-pager {
-  background: #0a5380;
+  background: #e99322;
 }
 .datebox .combo-arrow {
   background: transparent;
@@ -161,7 +158,7 @@ td {
   text-align: center;
 }
 .pagination td {
-  background: #0a5380;
+  background: #e99322;
   border: 0 none;
 }
 .pagination-btn-separator {
@@ -189,7 +186,7 @@ td {
 }
 .datagrid-toolbar .textbox {
   background: transparent;
-  border: 1px solid #1b7ac4;
+  border: 1px solid #ff3e29;
   margin: 0 5px;
   width: 60px;
 }
@@ -199,7 +196,7 @@ td {
 .datagrid-toolbar .search-box {
   display: inline-block;
   height: 27px;
-  border: 1px solid #1b7ac4;
+  border: 1px solid #ff3e29;
 }
 .datagrid-toolbar .search-box input {
   float: left;
@@ -217,14 +214,14 @@ td {
   color: #fff;
 }
 .combobox-item:hover {
-  background: #1b7ac4;
+  background: #ff3e29;
 }
 #search_input {
-  border: 1px solid #1b7ac4;
+  border: 1px solid #ff3e29;
   border-radius: 3px 0 0 3px;
 }
 #search_button {
-  background: #1b7ac4;
+  background: #ff3e29;
   display: inline-block;
   width: 25px;
   height: 24.5px;
@@ -253,7 +250,7 @@ li.tabs-last {
   display: none;
 }
 tr.pagenation {
-  background: #387195;
+  background: #c7b16a;
   border: 0 none;
 }
 tr.pagenation button {
@@ -279,7 +276,7 @@ tr.pagenation td {
   background: #6590ab;
 }
 .table-add:hover {
-  color: #0a5380;
+  color: #c40001;
 }
 .table-add:active {
   padding: 0;
@@ -301,7 +298,7 @@ button:active {
   border-bottom: 1px solid #24475e;
   border-radius: 3px;
   outline: none;
-  background-color: #1b7ac4;
+  background-color: #ff3e29;
   color: #fff;
   cursor: pointer;
 }
@@ -316,13 +313,13 @@ button:active {
   border: none;
   outline: none;
   border-radius: 2px;
-  background-color: #064E7B;
+  background-color: #000000;
   color: #fff;
   box-shadow: 1px 1px #000;
   cursor: pointer;
 }
 .btn-sm:hover {
-  background: #0B8FE1;
+  background: #DD2B37;
 }
 .btn-xs {
   width: 30px;
@@ -333,13 +330,13 @@ button:active {
   border: none;
   outline: none;
   border-radius: 2px;
-  background-color: #064E7B;
+  background-color: #000000;
   color: #fff;
   box-shadow: 1px 1px #000;
   cursor: pointer;
 }
 .btn-xs:hover {
-  background: #0B8FE1;
+  background: #DD2B37;
 }
 .btn-close-layout {
   display: block;
@@ -356,11 +353,11 @@ button:active {
   height: 20px;
   margin-top: 3px;
   border: 0 none;
-  background: #0a5380;
+  background: #e99322;
 }
 .tabs-header,
 .tabs-tool {
-  background: #0a5380;
+  background: #e99322;
   border: 0 none;
 }
 #left_windows .panel-tool {
@@ -386,7 +383,7 @@ input[type='password'] {
   padding-right: 10px;
   border: none;
   border-radius: 3px;
-  background-color: #04436a;
+  background-color: #000;
   color: #fff;
   text-decoration: none;
   font-family: 'Microsoft Yahei';
@@ -408,7 +405,7 @@ select {
   -moz-appearance: none;
   -webkit-appearance: none;
   /*在选择框的最右侧中间显示小箭头图片*/
-  background: #064E7B url("../images/arrow.png") no-repeat scroll right center;
+  background: #000000 url("../images/arrow.png") no-repeat scroll right center;
   /*为下拉小箭头留出一点位置，避免被文字覆盖*/
   padding-right: 14px;
 }
@@ -424,7 +421,7 @@ nav {
   width: 100%;
   height: 60px;
   line-height: 60px;
-  background: #0a5380;
+  background: #e99322;
   position: relative;
   z-index: 999;
   overflow: hidden;
@@ -464,7 +461,7 @@ nav .nav > li {
   font-size: 14px;
   color: #fff;
   text-align: center;
-  background: #1b7ac4;
+  background: #e4634e;
   position: relative;
 }
 nav .nav > li:nth-of-type(1) {
@@ -491,11 +488,11 @@ nav .nav > li > ul {
 nav .nav > li > ul > li {
   height: 0px;
   line-height: 30px;
-  background: #1b7ac4;
+  background: #e4634e;
   transition-duration: .7s;
 }
 nav .nav > li > ul > li:hover {
-  color: #000;
+  color: #e99322;
 }
 nav .user-center {
   margin-right: 60px;
@@ -512,7 +509,7 @@ nav .user-center #optionsList {
   right: 45px;
   top: 60px;
   width: 90px;
-  background: #0a5380;
+  background: #e99322;
   height: 0;
   overflow: hidden;
   transition: .8s .8s;

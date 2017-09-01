@@ -1,7 +1,7 @@
-@baseColor: rgb(10, 83, 128);
-@panelTitleColor: #064E7B;
-@baseLightColor: rgb(27, 122, 196);
-@baseBgColor: #387195;
+@baseColor: rgb(196, 0, 1);
+@panelTitleColor: #c40001;
+@baseLightColor: rgb(255, 62, 41);
+@baseBgColor: #c7b16a;
 
 
 @tableBgColor:#6590ab;
@@ -10,20 +10,20 @@
 @tableHoverColor: #508db6;
 
 
-@deepBgColor:#04436a;
-@panelBorderColor:#053e61;
-@buttonSMColor:#064E7B;
-@buttonSMhover:#0B8FE1;
-@buttonLGColor:#1b7ac4;
+@deepBgColor: #c40001;
+@panelBorderColor: #c40001;
+@buttonSMColor: #000000;
+@buttonSMhover:#DD2B37;
+@buttonLGColor: #ff3e29;
 @buttonLGHover: #1665a2;
-@navBg:rgb(10, 83, 128);
-@navbarColor:rgb(27, 122, 196);
+@navBg: #e99322;
+@navbarColor: #e4634e;
+@inputColor: #000;
 
-
-@panel_header_color:rgb(10, 83, 128);
-@panel_spilt_color: #074669;
-@accordion_selected: rgb(30, 139, 222);
-@panel_body_color:#387195;
+@panel_header_color: #e37316;
+@panel_spilt_color: rgb(199, 177, 106);
+@accordion_selected: #e37316;
+@panel_body_color: #e1a767;
 
 .panel-header{
   background: @panel_header_color;
@@ -80,7 +80,7 @@
 }
 .accordion .accordion-header-selected{
   background:@accordion_selected;
-  border-top: 1px solid #1e538f;
+  border-top: 1px solid #ff001e;
 }
 .accordion .accordion-header-selected .panel-title{
   color: #fff;
@@ -147,14 +147,9 @@
 }
 
 
-.layout-panel-east{
-  .panel-body{
-    background: @panel_body_color url("../images/tools.png") no-repeat 13px 0;
-  }
+.datagrid-row-over{
+  background: @tableHoverColor;
 }
-
-
-
 
 table{
   //width: 100%;
@@ -183,11 +178,6 @@ th,td{
   background: @tableHoverColor;
 }
 
-.datagrid-row-over{
-  background: @tableHoverColor;
-}
-
-
 .datagrid-toolbar{
   background: @deepBgColor;
   border:0 none;
@@ -195,10 +185,8 @@ th,td{
 
 .datagrid-htable, .datagrid-btable,
 .datagrid-ftable{
-  border-collapse: separate;
+  border-collapse: collapse;
 }
-
-
 
 .datagrid-header{
   border:0 none;
@@ -487,7 +475,7 @@ input[type='text'],input[type='password']{
   padding-right: 10px;
   border: none;
   border-radius: 3px;
-  background-color: #04436a;
+  background-color: @inputColor;
   color: #fff;
   text-decoration: none;
   font-family:'Microsoft Yahei';
@@ -594,7 +582,7 @@ nav{
           background:@navbarColor;
           transition-duration: .7s;
           &:hover{
-            color: #000;
+            color: @navBg;
           }
         }
       }

@@ -1,0 +1,39 @@
+<div class='options'>
+    <div id="tt" class="easyui-tabs" style="width:100%;height:200px;">
+
+        <div title="更换主题"  style="overflow:auto;padding:20px;display:none;">
+            <div data-theme='1' class="changeColor " id='defaultTheme'>默认</div>
+            <div data-theme='2' class="changeColor black" id='blackTheme'>黑夜</div>
+            <div data-theme='3' class="changeColor orange" id='orangeTheme'>橙色</div>
+            <div data-theme='4' class="changeColor transparent" id='transparentTheme'>透明</div>
+        </div>
+        <div title="修改密码" style="padding:20px;display:none;">
+            <p style='margin:10px ;color: #fff;'>
+                <label for="">原密码:</label>
+                <input type="password" name="" id="">
+            </p>
+            <p style='margin:10px ;color: #fff;'>
+                <label for="">新密码:</label>
+                <input type="password" name="" id="">
+            </p>
+            <p style='margin:10px ;color: #fff;'>
+                <label for="">确认密码</label>
+                <input type="password" name="" id="">
+            </p>
+        </div>
+        <div title="Tab3" style="padding:20px;display:none;">
+            tab3
+        </div>
+    </div>
+</div>
+<script>
+    $('#orangeTheme').on('click',function (){
+        $('#index_theme')[0].href='css/theme2.css'
+    })
+    $('#blackTheme').on('click',function (){
+        $('#index_theme')[0].href='css/theme3.css'
+    })
+    $('#defaultTheme').on('click',function (){
+        $('#index_theme')[0].href='css/theme.css'
+    })
+</script>

@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Title</title>
+    <title>交通信号管理系统</title>
     <link rel="stylesheet" href="./libs/jquery-easyui/css/easyui.css">
     <link rel="stylesheet" href="css/public.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" id='index_theme' href="css/theme.css">
     <link rel="stylesheet" href="pages/createCross/createCross.css">
     <link rel="stylesheet" href="https://openlayers.org/en/v4.3.1/css/ol.css" type="text/css">
     <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
@@ -63,9 +62,9 @@
         <div class="user-center fr clearfix">
             <a href="#" id='personalOptions'>您好! admin</a>
             <ul id='optionsList' class='clearfix'>
-                <li><a href="#"><i class='glyphicon glyphicon-user'></i> 用户管理</a></li>
-                <li><a href="#"><i class='glyphicon glyphicon-cog'></i> 设置</a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-log-out"></i> 退出</a></li>
+                <li><i class='glyphicon glyphicon-user'></i> 用户管理</li>
+                <li id='settings'><i class='glyphicon glyphicon-cog'></i> 设置</li>
+                <li><i class="glyphicon glyphicon-log-out"></i> 退出</li>
             </ul>
         </div>
 </nav>
@@ -73,7 +72,10 @@
     <div data-options="region:'east',collapsed:true" title="工具栏" style="width:100px;height:300px">
         <ul class="easyui-tree" data-options="animate:true,dnd:true"></ul>
     </div>
-    <div data-options="region:'west',split:true,collapsed:true,minWidth:145," title=" " style="width:460px;">
+    <div data-options="region:'west',split:true,collapsed:true,minWidth:145,tools: [{
+		iconCls:'icon-add',
+		handler:function(){alert('add')}
+    }]" title=" " style="width:460px;" id='west_layout'>
         <div class="easyui-accordion" data-options="fit:true,border:false" id='left_windows'>
 
         </div>
@@ -81,7 +83,7 @@
     <div data-options="region:'center',iconCls:'icon-ok'" style="">
 
     </div>
-    <div title=' ' data-options="region:'south',split:true,collapsed:true,href:'/traffic3-plan/pages/pubinfo.html'" style="width:100px;height:200px" id='south_layout'>
+    <div data-options="region:'south',split:true,collapsed:true,href:'/traffic3-plan/pages/pubinfo.html'" style="width:100px;height:393px" id='south_layout'>
 
     </div>
 <div id='south_layout_window' class="easyui-window"  data-options="title:'列表管理',tools:'#tb',closed:true">
@@ -93,6 +95,7 @@
 
 <div id="create_tc" class="easyui-window" data-options="closed:true"></div>
 <div id="edit_tc" class="easyui-window" data-options="closed:true"></div>
+<div id="settings_window" class="easyui-window" data-options="closed:true"></div>
 <a class="skiplink" href="#map">Go to map</a>
 <div id="map" class="map" tabindex="0"></div>
 <button id="zoom-out">Zoom out</button>
@@ -101,8 +104,6 @@
 </body>
 <script src="node_modules/jquery/dist/jquery.js"></script>
 <script src="libs/jquery-easyui/js/jquery.easyui.min.js"></script>
-<link rel="stylesheet" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
-<script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 <script src="libs/art-template/template-web.js"></script>
 <script src="js/public.js"></script>
 <script src="js/index.js"></script>

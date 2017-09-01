@@ -89,7 +89,7 @@ $('#left_windows').on('dragend','.icon-drag',function (e){
     dragWindow(title,endX,endY);
     if($('.layout-panel-west')[0].style.display!='none')
         $('#main_layout').layout('collapse','west')
-
+        
 })
 
 function dragWindow(title,x,y){
@@ -199,15 +199,22 @@ function openWindow(o){
 }
 
 
-
+// 检测地图移动事件
+setInterval(function (){
+   var y =$('#main_layout').layout('panel', 'south')[0].clientHeight;
+    $('.ol-viewport').css('margin-top','-'+y+'px');
+    var x =$('#main_layout').layout('panel', 'west')[0].clientWidth;
+    $('.ol-viewport').css('margin-left',x+'px');
+},50)
 
 
 
 
 // 打开西部的layout
 function openWestLayout(){
-    if($('.layout-panel-west')[0].style.display=='none')
+    if($('.layout-panel-west')[0].style.display=='none'){
         $('#main_layout').layout('expand','west')
+    }
 };
 
 // 关闭南部的layout
@@ -215,7 +222,6 @@ function closeSouthLayout(){
     if($('.layout-panel-south')[0].style.display!='none')
         $('#main_layout').layout('collapse','south')
 }
-
 
 // $.fn.openWindow=function (options){
 //     if(!options) options={};
@@ -288,12 +294,17 @@ $('#tc_list').on('click',function (){
     openSouthLayout();
 })
 
+$('body').on('click','.layout-button-left',function (){
+    console.log(1);
+})
+
 
 function openSouthLayout(){
     $('#list_tabs').tabs('select',currentTab)
     var south_layout = $('.layout-panel-south')[0];
     if (south_layout){
-        val = window.getComputedStyle($('.layout-panel-south')[0],null).getPropertyValue("display");
+        var val = window.getComputedStyle($('.layout-panel-south')[0],null).getPropertyValue("display");
+        
     }
     $('#main_layout').layout('add',{
         region: 'south',
@@ -312,6 +323,7 @@ function openSouthLayout(){
         $('#main_layout').layout('collapse','south');
     }else{
         $('#main_layout').layout('expand','south');
+
     }
 }
 
