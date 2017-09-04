@@ -93,14 +93,14 @@ $('#output_account').on('click',function (){
         href:'pages/inquery_statistics/output_account/output_account.html'
     })
 })
-$('#inquery_cross').on('click',function (){
+$('#inquery_cross').on('click',function () {
     addAccordion({
-        title:'关于系统',
-        href:'pages/inquery_statistics/about_system/about_system.html'
+        title: '关于系统',
+        href: 'pages/inquery_statistics/about_system/about_system.html'
     })
 
 
-
+})
 // ------------导航栏设置-------------
 
 $('#settings').on('click',function (){
