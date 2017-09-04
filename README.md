@@ -1,2 +1,0 @@
-# trafficLightsManage
-readMe
