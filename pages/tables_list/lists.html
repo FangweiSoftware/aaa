@@ -1,6 +1,5 @@
 
-<div id="tt" class="easyui-tabs" style="width:100%;height:100%;" data-options="tools:'#tab-tools'">
-
+<div id="manage_tables" class="easyui-tabs" style="width:100%;height:100%;" data-options="tools:'#tab-tools'">
     <div title="路口管理" data-options="" style="overflow:auto;display:none;">
         <div style='height:100%;'>
         <table id="tc_manage_table" style='height:100%;width:100%'>
@@ -64,7 +63,7 @@
         type:'get',
         url:WEBAPI_ADDRESS+'/api/Tc_pubinfo_basic/GetByPage',
         data:{
-            Num:20,
+            Num:10,
             Pno:1,
         },
         success:function(res){
@@ -181,10 +180,15 @@
             });
         }
     });
-
+    $('#manage_tables').tabs({
+        onSelect:function (title,index){
+            console.log(index);
+        }
+    })
 
 
 </script>
+
 <script type='text/html' id='pubinfo_manage_temp'>
     {{each data}}
     <tr data-id='{{$value.pubinfoid}}' data-pubno='{{$value.pubno}}' data-tuneid='{{$value.tuneid}}' data-pubfrom='{{$value.pubfrom}}' data-description='{{$value.description}}'>
