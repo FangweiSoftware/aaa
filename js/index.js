@@ -49,16 +49,16 @@ $('#process_pubinfo').on('click',function (){
         href:'pages/pubinfo_manage/process_pubinfo/process_pubinfo.html'
     })
 })
-$('#process_pubinfo').on('click',function (){
+$('#analyze_pubinfo').on('click',function (){
     addAccordion({
         title:'舆情分析',
         href:'pages/pubinfo_manage/analyze_pubinfo/analyze_pubinfo.html'
     })
 })
-$('#process_pubinfo').on('click',function (){
+$('#relative_pubinfo').on('click',function (){
     addAccordion({
         title:'同环比',
-        href:'pages/pubinfo_manage/analyze_pubinfo/relative_pubinfo.html'
+        href:'pages/pubinfo_manage/relative_pubinfo/relative_pubinfo.html'
     })
 })
 
@@ -83,7 +83,7 @@ $('#create_greenRoad').on('click',function (){
 $('#inquery_cross').on('click',function (){
     addAccordion({
         title:'路口查询',
-        href:'pages/inquery_statistics/inquery_cross.html'
+        href:'pages/inquery_statistics/inquery_cross/inquery_cross.html'
     })
 })
 
@@ -93,7 +93,7 @@ $('#output_account').on('click',function (){
         href:'pages/inquery_statistics/output_account/output_account.html'
     })
 })
-$('#inquery_cross').on('click',function () {
+$('#about_system').on('click',function () {
     addAccordion({
         title: '关于系统',
         href: 'pages/inquery_statistics/about_system/about_system.html'
