@@ -5,6 +5,9 @@ var WEBAPI_ADDRESS='http://192.168.200.219:8087';
 
 
 //----------------------------No.1导航栏功能注册区域-------------------
+
+//------ 1.1路口建档相关--------
+
 $('#create_cross').on('click',function (){
     addAccordion({
         title:'新建路口',
@@ -22,6 +25,83 @@ $('#edit_cross').on('click',function (){
     })
 })
 
+
+//---------- 1.2路口巡检相关---------
+$('#edit_plan').on('click',function (){
+    addAccordion({
+        title:'计划编辑',
+        href:'pages/cross_inspection/edit_plan/edit_plan.html'
+    })
+})
+
+$('#analyze_pro').on('click',function (){
+    addAccordion({
+        title:'问题分析',
+        href:'pages/cross_inspection/analyze_pro/analyze_pro.html'
+    })
+})
+
+
+// --------1.3舆情管理相关----------
+$('#process_pubinfo').on('click',function (){
+    addAccordion({
+        title:'舆情处理',
+        href:'pages/pubinfo_manage/process_pubinfo/process_pubinfo.html'
+    })
+})
+$('#process_pubinfo').on('click',function (){
+    addAccordion({
+        title:'舆情分析',
+        href:'pages/pubinfo_manage/analyze_pubinfo/analyze_pubinfo.html'
+    })
+})
+$('#process_pubinfo').on('click',function (){
+    addAccordion({
+        title:'同环比',
+        href:'pages/pubinfo_manage/analyze_pubinfo/relative_pubinfo.html'
+    })
+})
+
+
+// ------------1.4绿路优化相关-----------
+$('#optimize_task').on('click',function (){
+    addAccordion({
+        title:'优化任务',
+        href:'pages/greenRoad_optimize/optimize_task/optimize_task.html'
+    })
+})
+
+$('#create_greenRoad').on('click',function (){
+    addAccordion({
+        title:'新建绿路',
+        href:'pages/greenRoad_optimize/create_greenRoad/create_greenRoad.html'
+    })
+})
+
+
+//----------- 1.5查询统计相关---------
+$('#inquery_cross').on('click',function (){
+    addAccordion({
+        title:'路口查询',
+        href:'pages/inquery_statistics/inquery_cross.html'
+    })
+})
+
+$('#output_account').on('click',function (){
+    addAccordion({
+        title:'台账导出',
+        href:'pages/inquery_statistics/output_account/output_account.html'
+    })
+})
+$('#inquery_cross').on('click',function (){
+    addAccordion({
+        title:'关于系统',
+        href:'pages/inquery_statistics/about_system/about_system.html'
+    })
+
+
+
+// ------------导航栏设置-------------
 
 $('#settings').on('click',function (){
     openWindow({
