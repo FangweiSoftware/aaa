@@ -33,29 +33,23 @@ document.getElementById('zoom-in').onclick = function() {
 };
 
 
-
-$('#creatCross').on('click',function (){
-    addAccordion({
-        title:'新建路口',
-        href:'pages/createCross/createCross.html'
-    })
-})
-
-$('#editCross').on('click',function (){
-    addAccordion({
-        title:'路口编辑',
-        href:'pages/createCross/createCross.html'
-    })
-})
+// $left_window为左侧的手风琴菜单
+var $left_window=$('#left_windows');
 
 var currentTab=0;
 
+
+// 打开西区中的手风琴下拉窗口
 function addAccordion(options){
+    // 调用方法,打开西区窗口
     openWestLayout()
+    // 防止报错
     options=options||{};
-    var panel = $('#left_windows').accordion('getPanel',options.title);
+    // 获取相关参数
+    var panel = $left_window.accordion('getPanel',options.title);
+    // 如果含有该标题的窗口不存在的话,说明还不存在相关窗口, 新建一个
     if(!panel){
-        $('#left_windows').accordion('add', {
+        $left_window.accordion('add', {
             title: options.title||'New Title',
             // content: 'New Content',
             href:options.href||'',
@@ -64,22 +58,17 @@ function addAccordion(options){
             tools:[{
                 iconCls:'icon-drag',
                 // handler:function(){alert('new')}
-            }]
+            }],
+            onLoad:options.onLoad&&options.onLoad()
         });
     }else{
         if(panel)panel.panel('open');
-        $('#left_windows').accordion('select',options.title);
-        // $('#left_windows').accordion('remvove',options.title).accordion('add', {
-        //     title: options.title||'New Title',
-        //     // content: 'New Content',
-        //     href:options.href||'',
-        //     selected: true,
-        //     closable:true
-        // });
+        $left_window.accordion('select',options.title);
     }
 }
 
-$('#left_windows').on('dragend','.icon-drag',function (e){
+
+$left_window.on('dragend','.icon-drag',function (e){
     // var startX = e.pageX;
     // var startY = e.pageY;
     // 这里通过title判断拖动的是哪个窗口
@@ -92,21 +81,7 @@ $('#left_windows').on('dragend','.icon-drag',function (e){
         
 })
 
-function dragWindow(title,x,y){
-    switch(title)
-    {
-       case '新建路口':
-            openCreateCross(x,y);
-           $('#left_windows').accordion('remove',title);
-           break;
-        case '路口编辑':
-            openEditCross(x,y);
-            $('#left_windows').accordion('remove',title);
-            break;
-        default:
-            console.log('没有找到对应的窗口');
-    }
-}
+
 
 // 打开新建路口
 // 这里是封装的标题拖动后新打开的窗口
@@ -122,30 +97,7 @@ function dragWindow(title,x,y){
  h:高度,
  })
  */
-function openCreateCross(x,y){
-    openWindow({
-        el:'#create_tc',
-        title:'新建路口',
-        href:'/traffic3-plan/pages/createCross/createCross.html',
-        x:x,
-        y:y,
-        w:480,
-        h:545
-    })
-}
 
-// 打开编辑路口
-function openEditCross(x,y){
-    openWindow({
-        el:'#edit_tc',
-        title:'路口编辑',
-        href:'/traffic3-plan/pages/createCross/createCross.html',
-        x:x,
-        y:y,
-        w:480,
-        h:545
-    })
-}
 
 
 // 这里是封装的标题拖动后新打开的窗口
@@ -175,6 +127,7 @@ function openWindow(o){
         minimizable:false,
         maximizable:false,
         resizable:false,
+        onLoad:o.onLoad&&o.onLoad(),
         onMove:function (x,y){
             var west_layout = $('.layout-panel-west')[0];
             if (west_layout){
@@ -272,7 +225,7 @@ $('#mini_south_layout_window').on('click',function (){
         split: true,
         collapsed:true,
         height:200,
-        href:'/traffic3-plan/pages/crossManage.html',
+        href:'pages/crossManage.html',
         onLoad:function (){
             $('.btn-drag-layout').on('dragend',function (e){
                 $('#main_layout').layout('remove','south');
@@ -284,15 +237,7 @@ $('#mini_south_layout_window').on('click',function (){
 })
 
 
-$('#pubinfo_manage').on('click',function (){
-    currentTab=1;
-   openSouthLayout()
-})
 
-$('#tc_list').on('click',function (){
-    currentTab=0;
-    openSouthLayout();
-})
 
 $('body').on('click','.layout-button-left',function (){
     console.log(1);
