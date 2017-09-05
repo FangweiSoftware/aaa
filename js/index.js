@@ -1,7 +1,7 @@
 /**
  * Created by Fairlady on 2017/08/29.
  */
-var WEBAPI_ADDRESS='http://192.168.200.219:8087';
+var WEBAPI_ADDRESS='http://192.168.200.219:8087/api';
 
 
 //----------------------------No.1导航栏功能注册区域-------------------
@@ -11,12 +11,13 @@ var WEBAPI_ADDRESS='http://192.168.200.219:8087';
 $('#create_cross').on('click',function (){
     addAccordion({
         title:'新建路口',
-        href:'pages/cross_record/create_cross/createCross.html',
+        href:'pages/cross_record/create_cross/createIntersection.html',
         onLoad:function (){
-            console.log(1);
+            var createIntersection = new CreateIntersection('create_intersection');
+            createIntersection.initCreateIntersection();
         }
     })
-})
+});
 
 $('#edit_cross').on('click',function (){
     addAccordion({
@@ -146,13 +147,13 @@ function openCreateCross(x,y){
     openWindow({
         el:'#create_cross_window',
         title:'新建路口',
-        href:'pages/cross_record/create_cross/createCross.html',
+        href:'pages/cross_record/create_cross/createIntersection.html',
         x:x,
         y:y,
-        w:480,
-        h:545,
+        w:525,
         onLoad:function (){
-            console.log('我打开了窗口');
+            var createIntersection = new CreateIntersection('create_intersection');
+            createIntersection.initCreateIntersection();
         }
     })
 }

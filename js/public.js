@@ -30,7 +30,7 @@ function addAccordion(options){
                 iconCls:'icon-drag',
                 // handler:function(){alert('new')}
             }],
-            onLoad:options.onLoad&&options.onLoad()
+            onLoad:options.onLoad
         });
     }else{
         if(panel)panel.panel('open');
@@ -93,12 +93,12 @@ function openWindow(o){
         top:o.y||100,
         title:o.title,
         shadow:false,
-        width:o.w||400,
-        height:o.h||500,
+        width:o.w,
+        height:o.h,
         minimizable:false,
         maximizable:false,
         resizable:false,
-        onLoad:o.onLoad&&o.onLoad(),
+        onLoad:o.onLoad,
         onMove:function (x,y){
             var west_layout = $('.layout-panel-west')[0];
             if (west_layout){
@@ -243,4 +243,24 @@ function openSouthLayout(){
     }
 }
 
+/*
+ * 获取当天日期，格式为（年-月-日）
+ * */
+function getTodayDate () {
+    var date = new Date();                    // 获取当天时间
+    var years = date.getFullYear();            // 获取年
+    var mouths = date.getMonth() + 1;          // 获取月
+    var days = date.getDate();                 // 获取日
+    var hours = date.getHours();               // 获取时
+    var minutes = date.getMinutes();           // 获取分
+    var seconds = date.getSeconds();           // 获取秒
 
+    if (mouths < 10) {mouths = '0' + mouths;}    // 如果小于 10 则为其前面添加 0
+    if (days < 10) {days = '0' + days;}
+    if (hours < 10) {hours = '0' + hours;}
+    if (minutes < 10) {minutes = '0' + minutes;}
+    if (seconds < 10) {seconds = '0' + seconds;}
+
+    // 返回格式为"2017-07-17T11:57:59"
+    return years + '-' + mouths + '-' + days + 'T' + hours + ':' + minutes + ':' + seconds;
+}
